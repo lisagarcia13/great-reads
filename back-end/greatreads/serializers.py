@@ -14,4 +14,4 @@ class AuthorSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Author
-        fields = ['name', 'books']
+        fields = ['name', 'books', 'image']
