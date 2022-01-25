@@ -36,7 +36,7 @@ SECRET_KEY = 'django-insecure-tx^d@a()^sv9=d#i03-$xjh6m3nd5ez=@vr_!t=w0d1q=i4jjr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['greatreads1.herokuapp.com']
+ALLOWED_HOSTS = ['greatreads1.herokuapp.com', 'localhost']
 
 
 # Application definition
