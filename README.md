@@ -46,6 +46,12 @@ Showing the relationships between authors and books.
 
 [Entity Relationship Diagram](https://whimsical.com/WAKnLnGZ3HAttWGxrvbSKi "Entity Relationship Diagram")
 
+# Componenet Hierarchy
+
+Components tree for React
+
+[Component Hierarchy](https://whimsical.com/JbbwtqmoUQxpBe53cwuK12 "component hierarchy")
+
 # API Endpoints
 
 / - home
