@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from models import Author, Book
+from greatreads.models import Author, Book
 
 
 class BookSerializer(serializers.HyperlinkedModelSerializer):
