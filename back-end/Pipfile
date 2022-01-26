@@ -13,6 +13,7 @@ whitenoise = "*"
 dj-database-url = "*"
 python-dotenv = "*"
 djangorestframework-simplejwt = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 
