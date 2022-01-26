@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'greatreads',
     'rest_framework',
+    'accounts',
 ]
 
 MIDDLEWARE = [
