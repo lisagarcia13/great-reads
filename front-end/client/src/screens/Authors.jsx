@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 function Books({ authors }, props) {
   return (
     <Layout user={props.user}>
-      <div className="all-products">
+      <div className="all-books">
         <AuthorCards authors={authors} />
       </div>
     </Layout>
