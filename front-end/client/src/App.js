@@ -12,7 +12,8 @@ import AddBook from './screens/AddBook'
 import AddAuthor from './screens/AddAuthor'
 import EditBooks from './screens/EditBooks'
 import EditAuthors from './screens/EditAuthors'
-import BookDetails from './screens/BookDetails';
+import BookDetails from './screens/BookDetails'
+import AuthorDetails from './screens/AuthorDetails';
 
 function App() {
 
@@ -46,7 +47,7 @@ function App() {
         <Route path={'/books/:id/edit'} element={<EditBooks user={user} setToggle={setToggle} />} />
         <Route path={'/add-book'} element={ <AddBook user={user} setToggle={setToggle}/> } />
         <Route path={'/authors'} element={<Authors user={user} toggle={toggle} />} />
-        <Route path={'/authors/:id'} element={<h1>AUTHOR DETAIL</h1>} />
+        <Route path={'/authors/:id'} element={<AuthorDetails user={user} setToggle={setToggle}/>} />
         <Route path={'/authors/:id/edit'} element={<EditAuthors user={user} toggle={toggle} />} />
         <Route path={'/add-author'} element={<AddAuthor user={user} setToggle={setToggle} />} />
         <Route path={'/sign-in'} element={<SignIn setUser={setUser}/>} />
