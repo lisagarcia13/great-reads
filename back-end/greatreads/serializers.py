@@ -6,7 +6,7 @@ class BookSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Book
-        fields = ['title', 'release', 'description', 'author', 'image']
+        fields = ['id', 'title', 'release', 'description', 'author', 'image']
 
 
 class AuthorSerializer(serializers.HyperlinkedModelSerializer):
@@ -14,4 +14,4 @@ class AuthorSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Author
-        fields = ['name', 'books', 'image']
+        fields = ['id', 'name', 'books', 'image']
