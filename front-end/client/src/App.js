@@ -3,9 +3,10 @@ import { Routes, Route } from 'react-router-dom'
 import {useEffect, useState} from 'react'
 import { verifyUser } from './services/users'
 import Authors from './screens/Authors'
-import Books from './screens/Books';
-import SignUp from './screens/SignUp';
-import SignIn from './screens/SignIn';
+import Books from './screens/Books'
+import SignUp from './screens/SignUp'
+import SignIn from './screens/SignIn'
+import SignOut from './screens/SignOut';
 
 function App() {
 
@@ -44,7 +45,7 @@ function App() {
         <Route path={'/add-author'} element={<h1> ADD AUTHORS</h1>} />
         <Route path={'/sign-in'} element={<SignIn setUser={setUser}/>} />
         <Route path={'/sign-up'} element={<SignUp setUser={setUser}/>} />
-        <Route path ={'/sign-out'} element={<h1>SIGN OUT</h1>} />
+        <Route path ={'/sign-out'} element={<SignOut setUser={setUser}/>} />
       </Routes>
     </div>
   );
