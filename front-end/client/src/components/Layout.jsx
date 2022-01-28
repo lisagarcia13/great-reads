@@ -1,5 +1,5 @@
-import Nav from "../Nav/Nav";
-import Footer from "../Footer/Footer";
+import Nav from "./Nav";
+import Footer from "./Footer";
 
 const Layout = (props) => (
   <div className="layout">
