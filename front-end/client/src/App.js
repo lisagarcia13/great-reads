@@ -8,7 +8,8 @@ import SignUp from './screens/SignUp'
 import SignIn from './screens/SignIn'
 import SignOut from './screens/SignOut'
 import Home from './screens/Home'
-import AddBook from './screens/AddBook';
+import AddBook from './screens/AddBook'
+import AddAuthor from './screens/AddAuthor'
 
 function App() {
 
@@ -40,17 +41,18 @@ function App() {
         <Route path={'/books'} element={<Books user={user} toggle={toggle }/>} />
         <Route path={'/books/:id'} element={<h1>BOOK DETAIL</h1>} />
         <Route path={'/books/:id/edit'} element={<h1>BOOK EDIT</h1>} />
-        <Route path={'/add-book'} element={user ? <AddBook user={user} setToggle={setToggle}/> : <Navigate to='/sign-up'/>} />
+        <Route path={'/add-book'} element={ <AddBook user={user} setToggle={setToggle}/> } />
         <Route path={'/authors'} element={<Authors user={user} toggle={toggle} />} />
         <Route path={'/authors/:id'} element={<h1>AUTHOR DETAIL</h1>} />
         <Route path={'/authors/:id/edit'} element={<h1>AUTHOR EDIT</h1>} />
-        <Route path={'/add-author'} element={<h1> ADD AUTHORS</h1>} />
+        <Route path={'/add-author'} element={<AddAuthor user={user} setToggle={setToggle} />} />
         <Route path={'/sign-in'} element={<SignIn setUser={setUser}/>} />
-        <Route path={'/signup'} element={<SignUp setUser={setUser}/>} />
+        <Route path={'/sign-up'} element={<SignUp setUser={setUser}/>} />
         <Route path ={'/sign-out'} element={<SignOut setUser={setUser}/>} />
       </Routes>
     </div>
   );
-}
+} 
 
 export default App;
+///user ? >: <Navigate to='/sign-up'/>
