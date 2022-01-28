@@ -38,6 +38,7 @@ function EditBooks(props) {
     nav(`/books/${id}`);
     props.setToggle((prevToggle) => !prevToggle);
   };
+
   return (
     <div>
       <Layout user={props.user}>
@@ -64,7 +65,7 @@ function EditBooks(props) {
                 />
                 <label>Release Date: </label>
                 <input
-                  placeholder="Date"
+                  placeholder="YYYY-MM-DD"
                   value={book.release}
                   name="date"
                   required

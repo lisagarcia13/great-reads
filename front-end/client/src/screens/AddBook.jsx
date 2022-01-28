@@ -55,7 +55,7 @@ function AddBook(props) {
                 />
                 <label>Release Date: </label>
                 <input
-                  placeholder="Date"
+                  placeholder="YYYY-MM-DD"
                   value={book.release}
                   name="date"
                   required

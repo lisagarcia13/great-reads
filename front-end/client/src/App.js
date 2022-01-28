@@ -10,7 +10,8 @@ import SignOut from './screens/SignOut'
 import Home from './screens/Home'
 import AddBook from './screens/AddBook'
 import AddAuthor from './screens/AddAuthor'
-import EditBooks from './screens/EditBooks';
+import EditBooks from './screens/EditBooks'
+import EditAuthors from './screens/EditAuthors';
 
 function App() {
 
@@ -45,7 +46,7 @@ function App() {
         <Route path={'/add-book'} element={ <AddBook user={user} setToggle={setToggle}/> } />
         <Route path={'/authors'} element={<Authors user={user} toggle={toggle} />} />
         <Route path={'/authors/:id'} element={<h1>AUTHOR DETAIL</h1>} />
-        <Route path={'/authors/:id/edit'} element={<h2>cool</h2>} />
+        <Route path={'/authors/:id/edit'} element={<EditAuthors user={user} toggle={toggle} />} />
         <Route path={'/add-author'} element={<AddAuthor user={user} setToggle={setToggle} />} />
         <Route path={'/sign-in'} element={<SignIn setUser={setUser}/>} />
         <Route path={'/sign-up'} element={<SignUp setUser={setUser}/>} />
