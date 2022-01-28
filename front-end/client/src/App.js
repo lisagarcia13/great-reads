@@ -46,7 +46,7 @@ function App() {
         <Route path={'/authors/:id/edit'} element={<h1>AUTHOR EDIT</h1>} />
         <Route path={'/add-author'} element={<h1> ADD AUTHORS</h1>} />
         <Route path={'/sign-in'} element={<SignIn setUser={setUser}/>} />
-        <Route path={'/sign-up'} element={<SignUp setUser={setUser}/>} />
+        <Route path={'/signup'} element={<SignUp setUser={setUser}/>} />
         <Route path ={'/sign-out'} element={<SignOut setUser={setUser}/>} />
       </Routes>
     </div>
