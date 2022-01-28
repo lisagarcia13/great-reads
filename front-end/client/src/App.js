@@ -4,6 +4,7 @@ import {useEffect, useState} from 'react'
 import { verifyUser } from './services/users'
 import Authors from './screens/Authors'
 import Books from './screens/Books';
+import SignUp from './screens/SignUp';
 
 function App() {
 
@@ -41,7 +42,7 @@ function App() {
         <Route path={'/authors/:id/edit'} element={<h1>AUTHOR EDIT</h1>} />
         <Route path={'/add-author'} element={<h1> ADD AUTHORS</h1>} />
         <Route path={'/sign-in'} element={<h1>SIGN IN</h1>} />
-        <Route path={'/sign-up'} element={<h1>SIGN UP</h1>} />
+        <Route path={'/sign-up'} element={<SignUp setUser={setUser}/>} />
         <Route path ={'/sign-out'} element={<h1>SIGN OUT</h1>} />
       </Routes>
     </div>
