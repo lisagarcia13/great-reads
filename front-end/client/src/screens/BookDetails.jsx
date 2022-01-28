@@ -6,14 +6,14 @@ import { getBook, deleteBook } from "../services/books";
 function BookDetails(props) {
   const navigate = useNavigate();
 
-  const [bookDetails, setBookDetails] = useState(null);
+  const [book, setBook] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const { id } = useParams();
 
   useEffect(() => {
     const fetchBook = async () => {
       const book = await getBook(id);
-      setBookDetails(book);
+      setBook(book);
       setLoaded(true);
     };
     fetchBook();
@@ -24,7 +24,7 @@ function BookDetails(props) {
   }
 
   const handleDelete = () => {
-    deleteBook(bookDetails.id);
+    deleteBook(book.id);
     navigate("/books");
     props.setToggle((prevToggle) => !prevToggle);
   };
@@ -32,15 +32,18 @@ function BookDetails(props) {
   return (
     <Layout user={props.user}>
       <div>
-        <h2>{bookDetails.title}</h2>
-        <h4> Written by: {bookDetails.author}</h4>
-        <img src={bookDetails.image} alt={bookDetails.title} />
-        <h4> Release Date: {bookDetails.release}</h4>
+        <h2>{book.title}</h2>
+        <h4> Written by: {book.author}</h4>
+        <img src={book.image} alt={book.title} />
+        <h4> Release Date: {book.release}</h4>
         <h3>Description: </h3>
-        <p>{bookDetails.description}</p>
-        <button className="delete-button" onClick={handleDelete}>
-          Delete
-        </button>
+        <p>{book.description}</p>
+        <div className="button-container">
+          <Link to={`/books/${book.id}/edit`}>Edit</Link>
+          <button className="delete-button" onClick={handleDelete}>
+            Delete
+          </button>
+        </div>
       </div>
     </Layout>
   );
