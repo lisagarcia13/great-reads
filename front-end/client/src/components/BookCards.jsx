@@ -18,16 +18,13 @@ function BookCards(props) {
   }, [props.toggle]);
 
   return (
-    <div className="all-products">
+    <div className="all-books">
       {books.map((book) => (
         <div key={book.id} className="book-card-div">
           <Link className="link" to={`/books/${book.id}`}>
             <h2>{book.title}</h2>
-            <img src={book.image} alt="book cover" />
+            <img src={book.image} alt={book.title} />
           </Link>
-          <div className="book-card-info">
-            <h3>{book.author}</h3>
-          </div>
         </div>
       ))}
     </div>
