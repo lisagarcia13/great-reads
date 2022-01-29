@@ -35,11 +35,7 @@ function BookDetails(props) {
       <div className="book-detail-container">
         <div className="book-author">
           <h2>{book.title}</h2>
-          <h4> Written by: {book.author.name}</h4>
-          {/* {book.author.map((author) => (
-            <h3>{author.name}</h3>
-          ))} */}
-          {/* {author.name} */}
+          <h4> Written by: {book.author}</h4>
         </div>
         <img className="book-detail-img" src={book.image} alt={book.title} />
         <div className="book-details">
