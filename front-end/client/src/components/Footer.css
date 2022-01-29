@@ -1,0 +1,18 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+
+.footer {
+  background-color: #afb3f7;
+  color: white;
+  min-height: 70px;
+  display: flex;
+  flex-direction: column;
+  font-family: "PT Sans";
+  justify-content: center;
+  align-items: center;
+}
+
+.icons {
+  height: 30px;
+  padding: 20px;
+  margin-top: -15px;
+}

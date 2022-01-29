@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+
+.link {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  padding: 20px;
+  margin-right: 20px;
+  /* flex-direction: row; */
+  /* justify-content: flex-end; */
+}
+.links {
+  display: flex;
+}
+.nav {
+  background-color: #afb3f7;
+  /* position: fixed; */
+  width: 100%;
+  font-family: "PT Sans";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "PT Sans";
+  display: flex;
+  padding-left: 60px;
+}

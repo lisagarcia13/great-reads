@@ -23,7 +23,7 @@ function AuthorCards(props) {
       {authors.map((author) => (
         <div key={author.id} className="author-card-div">
           <Link
-            className="link"
+            className="link-author"
             to={`/authors/${author.id}`}
             style={{ textDecoration: "none" }}
           >

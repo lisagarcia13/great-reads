@@ -23,7 +23,7 @@ function BookCards(props) {
       {books.map((book) => (
         <div key={book.id} className="book-card-div">
           <Link
-            className="link"
+            className="link-book"
             style={{ textDecoration: "none" }}
             to={`/books/${book.id}`}
           >
