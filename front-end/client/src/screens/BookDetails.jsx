@@ -32,17 +32,22 @@ function BookDetails(props) {
 
   return (
     <Layout user={props.user}>
-      <div>
-        <h2>{book.title}</h2>
-        <h4> Written by:</h4>
-        {/* {book.authors.map((author) => (
+      <div className="book-detail-container">
+        <div className="book-author">
+          <h2>{book.title}</h2>
+          <h4> Written by: {book.author}</h4>
+          {/* {book.authors.map((author) => (
           <h3>{author.name}</h3>
         ))} */}
+        </div>
         <img className="book-detail-img" src={book.image} alt={book.title} />
-        <h4> Release Date: {book.release}</h4>
-        <h3>Description: </h3>
-        <p>{book.description}</p>
-        <div className="button-container">
+        <div className="book-details">
+          <h4> Release Date: {book.release}</h4>
+          <h3>Description: </h3>
+          <p>{book.description}</p>
+        </div>
+
+        <div className="detail-button-container">
           <Link to={`/books/${book.id}/edit`}>Edit</Link>
           <button className="delete-button" onClick={handleDelete}>
             Delete
