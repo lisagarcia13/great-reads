@@ -78,16 +78,6 @@ function SignUp(props) {
               placeholder="Enter Username"
               onChange={handleChange}
             />
-            <label className="signup-label">Email: </label>
-            <input
-              required
-              className="signup-input"
-              type="email"
-              name="email"
-              value={email}
-              placeholder="Enter Email"
-              onChange={handleChange}
-            />
             <label className="signup-label">Password: </label>
             <input
               required
@@ -96,6 +86,16 @@ function SignUp(props) {
               value={password}
               type="password"
               placeholder="Password"
+              onChange={handleChange}
+            />
+            <label className="signup-label">Email: </label>
+            <input
+              required
+              className="signup-input"
+              type="email"
+              name="email"
+              value={email}
+              placeholder="Enter Email"
               onChange={handleChange}
             />
             {renderError()}

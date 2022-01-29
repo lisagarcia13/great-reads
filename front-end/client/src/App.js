@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route} from 'react-router-dom'
+import { Routes, Route, Navigate} from 'react-router-dom'
 import {useEffect, useState} from 'react'
 import { verifyUser } from './services/users'
 import Authors from './screens/Authors'
@@ -43,13 +43,13 @@ function App() {
       <Routes>
         <Route path={'/'} element={<Home />} />
         <Route path={'/books'} element={<Books user={user} toggle={toggle }/>} />
-        <Route path={'/books/:id'} element={<BookDetails  user={user} setToggle={setToggle} />} />
-        <Route path={'/books/:id/edit'} element={<EditBooks user={user} setToggle={setToggle} />} />
-        <Route path={'/add-book'} element={ <AddBook user={user} setToggle={setToggle}/> } />
+        <Route path={'/books/:id'} element={<BookDetails  user={user} setToggle={setToggle} /> } />
+        <Route path={'/books/:id/edit'} element={ user ? <EditBooks user={user} setToggle={setToggle} /> : <Navigate to='/sign-up'/>} />
+        <Route path={'/add-book'} element={ user ?  <AddBook user={user} setToggle={setToggle}/> : <Navigate to='/sign-up'/>} />
         <Route path={'/authors'} element={<Authors user={user} toggle={toggle} />} />
         <Route path={'/authors/:id'} element={<AuthorDetails user={user} setToggle={setToggle}/>} />
-        <Route path={'/authors/:id/edit'} element={<EditAuthors user={user} toggle={toggle} />} />
-        <Route path={'/add-author'} element={<AddAuthor user={user} setToggle={setToggle} />} />
+        <Route path={'/authors/:id/edit'} element={user ? <EditAuthors user={user} toggle={toggle} />: <Navigate to='/sign-up'/>} />
+        <Route path={'/add-author'} element={ user ? <AddAuthor user={user} setToggle={setToggle} /> : <Navigate to='/sign-up'/>} />
         <Route path={'/sign-in'} element={<SignIn setUser={setUser}/>} />
         <Route path={'/sign-up'} element={<SignUp setUser={setUser}/>} />
         <Route path ={'/sign-out'} element={<SignOut setUser={setUser}/>} />

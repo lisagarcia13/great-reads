@@ -47,11 +47,10 @@ function AuthorDetails(props) {
           <div>
             <h3>Books:</h3>
             <div>
-              {author.books.map((book) => (
-                <div key={author.id}>
-                  <h3>{book.title}</h3>
-                </div>
-              ))}
+              {/* <Link to = {`/books/${book.id}`} >
+             
+              </Link> */}
+              {author.books}
             </div>
           </div>
         </div>

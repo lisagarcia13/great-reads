@@ -7,7 +7,7 @@ function SignIn(props) {
   const navigate = useNavigate();
 
   const [form, setForm] = useState({
-    email: "",
+    username: "",
     password: "",
     isError: false,
     errorMsg: "",
@@ -32,7 +32,7 @@ function SignIn(props) {
       setForm({
         isError: true,
         errorMsg: "Invalid Credentials",
-        email: "",
+        username: "",
         password: "",
       });
     }
@@ -57,7 +57,7 @@ function SignIn(props) {
     }
   };
 
-  const { email, password } = form;
+  const { username, password } = form;
 
   return (
     <Layout className="layout-signin" user={props.user}>
@@ -67,15 +67,15 @@ function SignIn(props) {
         </div>
         <form className="signin-form" onSubmit={onSignIn}>
           <div className="container">
-            <label className="signin-label">Email: </label>
-            <div className="signin-email">
+            <label className="signin-label">Username: </label>
+            <div className="signin-usernmae">
               <input
                 required
                 className="signin-input"
                 type="text"
-                name="email"
-                value={email}
-                placeholder="Enter Email"
+                name="username"
+                value={username}
+                placeholder="Enter Username"
                 onChange={handleChange}
               />
             </div>
