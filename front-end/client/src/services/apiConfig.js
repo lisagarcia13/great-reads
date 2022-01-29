@@ -1,10 +1,10 @@
 import axios from 'axios'
 
-// const getToken = () => {
-//     return new Promise(resolve => {
-//         resolve(`Bearer ${localStorage.getItem('token') || null}`)
-//     })
-// }
+const getToken = () => {
+  return new Promise(resolve => {
+      resolve(`Bearer ${localStorage.getItem('token') || null}`)
+  })
+}
 
 const api = axios.create({
     baseURL: 
@@ -13,12 +13,20 @@ const api = axios.create({
 
 // process.env.NODE_ENV === 'production'
 
-// api.interceptors.request.use(async function (config) {
-//     config.headers['Authorization'] = await getToken()
-//     return config
-// }, function (error) {
-//     console.log('Request error: ', error)
-//     return Promise.reject(error)
+// const api = axios.create({
+//   baseURL:
+//     process.env.NODE_ENV === "production"
+//       ? "https://greatreads1.herokuapp.com/"
+//       : "http://localhost:8000",
 // });
 
-export default api
+
+api.interceptors.request.use(async function (config) {
+  config.headers['Authorization'] = await getToken()
+  return config
+}, function (error) {
+  console.log('Request error: ', error)
+  return Promise.reject(error)
+});
+
+export default api;

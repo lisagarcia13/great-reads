@@ -46,7 +46,6 @@ function BookDetails(props) {
           <h3>Description: </h3>
           <p>{book.description}</p>
         </div>
-
         <div className="detail-button-container">
           <Link to={`/books/${book.id}/edit`}>Edit</Link>
           <button className="delete-button" onClick={handleDelete}>
