@@ -39,6 +39,16 @@ function AuthorDetails(props) {
           <button className="delete-button" onClick={handleDelete}>
             Delete
           </button>
+          <div>
+            <h3>Books:</h3>
+            <div>
+              {author.books.map((book) => (
+                <div key={author.id}>
+                  <h3>{book.title}</h3>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </Layout>

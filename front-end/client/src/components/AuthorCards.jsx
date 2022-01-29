@@ -1,6 +1,7 @@
 import { getAuthors } from "../services/authors";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import "./AuthorCards.css";
 
 function AuthorCards(props) {
   const [authors, setAuthors] = useState([]);
@@ -21,9 +22,17 @@ function AuthorCards(props) {
     <div className="all-authors">
       {authors.map((author) => (
         <div key={author.id} className="author-card-div">
-          <Link className="link" to={`/authors/${author.id}`}>
+          <Link
+            className="link"
+            to={`/authors/${author.id}`}
+            style={{ textDecoration: "none" }}
+          >
             <h2>{author.name}</h2>
-            <img src={author.image} alt={author.title} />
+            <img
+              className="main-author-img"
+              src={author.image}
+              alt={author.title}
+            />
           </Link>
         </div>
       ))}

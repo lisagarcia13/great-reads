@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { getBooks } from "../services/books";
+import "./BookCards.css";
 
 function BookCards(props) {
   const [books, setBooks] = useState([]);
@@ -21,9 +22,13 @@ function BookCards(props) {
     <div className="all-books">
       {books.map((book) => (
         <div key={book.id} className="book-card-div">
-          <Link className="link" to={`/books/${book.id}`}>
+          <Link
+            className="link"
+            style={{ textDecoration: "none" }}
+            to={`/books/${book.id}`}
+          >
             <h2>{book.title}</h2>
-            <img src={book.image} alt={book.title} />
+            <img className="main-book-img" src={book.image} alt={book.title} />
           </Link>
         </div>
       ))}

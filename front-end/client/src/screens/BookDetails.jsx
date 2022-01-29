@@ -33,7 +33,10 @@ function BookDetails(props) {
     <Layout user={props.user}>
       <div>
         <h2>{book.title}</h2>
-        <h4> Written by: {book.author}</h4>
+        <h4> Written by:</h4>
+        {/* {book.authors.map((author) => (
+          <h3>{author.name}</h3>
+        ))} */}
         <img src={book.image} alt={book.title} />
         <h4> Release Date: {book.release}</h4>
         <h3>Description: </h3>
