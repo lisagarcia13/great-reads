@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import { getAuthor, deleteAuthor } from "../services/authors";
+import "./AuthorDetails.css";
 
 function AuthorDetails(props) {
   const navigate = useNavigate();
@@ -33,7 +34,11 @@ function AuthorDetails(props) {
     <Layout user={props.user}>
       <div>
         <h2>{author.name}</h2>
-        <img src={author.image} alt={author.name} />
+        <img
+          className="author-detail-img"
+          src={author.image}
+          alt={author.name}
+        />
         <div className="button-container">
           <Link to={`/authors/${author.id}/edit`}>Edit</Link>
           <button className="delete-button" onClick={handleDelete}>

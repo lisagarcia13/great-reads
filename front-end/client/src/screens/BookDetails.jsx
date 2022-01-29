@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import { getBook, deleteBook } from "../services/books";
+import "./BookDetails.css";
 
 function BookDetails(props) {
   const navigate = useNavigate();
@@ -37,7 +38,7 @@ function BookDetails(props) {
         {/* {book.authors.map((author) => (
           <h3>{author.name}</h3>
         ))} */}
-        <img src={book.image} alt={book.title} />
+        <img className="book-detail-img" src={book.image} alt={book.title} />
         <h4> Release Date: {book.release}</h4>
         <h3>Description: </h3>
         <p>{book.description}</p>
