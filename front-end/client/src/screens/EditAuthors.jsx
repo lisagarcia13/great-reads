@@ -62,7 +62,7 @@ function EditAuthors(props) {
                 required
                 onChange={handleChange}
               />
-              <button className="author-update-button">Submit Edit</button>
+              <button className="author-update-button">Submit</button>
             </form>
           </div>
         </div>

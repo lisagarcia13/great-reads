@@ -11,7 +11,7 @@ class Author(models.Model):
 
 class Book(models.Model):
     title = models.CharField(max_length=256)
-    release = models.CharField(max_length=256, null=True)
+    release = models.IntegerField(null=True)
     image = models.CharField(max_length=256, null=True)
     description = models.CharField(max_length=256)
     author = models.ForeignKey(

@@ -50,7 +50,7 @@ function App() {
         <Route path={'/add-book'} element={ <AddBook user={user} setToggle={setToggle}/> } />
         <Route path={'/authors'} element={<Authors user={user} toggle={toggle} />} />
         <Route path={'/authors/:id'} element={<AuthorDetails user={user} setToggle={setToggle}/>} />
-        <Route path={'/authors/:id/edit'} element={<EditAuthors user={user} toggle={toggle} />} />
+        <Route path={'/authors/:id/edit'} element={<EditAuthors user={user} setToggle={toggle} />} />
         <Route path={'/add-author'} element={ <AddAuthor user={user} setToggle={setToggle} /> } />
         <Route path={'/sign-in'} element={<SignIn setUser={setUser}/>} />
         <Route path={'/sign-up'} element={<SignUp setUser={setUser}/>} />

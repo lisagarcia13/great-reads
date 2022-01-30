@@ -10,6 +10,7 @@ function AddAuthor(props) {
   const [author, setAuthor] = useState({
     name: "",
     image: "",
+    books: [],
   });
 
   const handleChange = (e) => {
