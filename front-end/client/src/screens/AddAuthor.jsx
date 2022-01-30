@@ -35,23 +35,27 @@ function AddAuthor(props) {
             <div className="author-create-form">
               <h1>Add Author Form</h1>
               <form onSubmit={handleSubmit}>
-                <label>Image URL: </label>
+                <label className="add-label">Image URL: </label>
                 <input
+                  className="author-input"
                   placeholder="Image URL"
                   value={author.image}
                   name="image"
                   required
                   onChange={handleChange}
                 />
-                <label>Author Name: </label>
+                <label className="add-label">Author Name: </label>
                 <input
-                  placeholder="Name"
+                  className="author-input"
+                  placeholder="Author Name"
                   value={author.name}
                   name="name"
                   required
                   onChange={handleChange}
                 />
-                <button type="submit">Submit Author</button>
+                <button className="author-create-button" type="submit">
+                  Submit
+                </button>
               </form>
             </div>
           </div>
