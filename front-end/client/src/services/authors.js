@@ -2,7 +2,7 @@ import api from './apiConfig'
 
 export const getAuthors = async () => {
   try {
-      const response = await api.get('/authors')
+      const response = await api.get('/authors/')
       return response.data
   } catch (error) {
       throw error
@@ -18,7 +18,7 @@ export const getAuthor = async id => {
   }
 }
 
-export const createAuthor = async author => {
+export const createAuthor = async (author) => {
   try {
       const response = await api.post('/authors', author)
       return response.data
@@ -36,7 +36,7 @@ export const updateAuthor = async (id, author) => {
   }
 }
 
-export const deleteAuthor = async id => {
+export const deleteAuthor = async (id) => {
   try {
       const response = await api.delete(`/authors/${id}`)
       return response.data
