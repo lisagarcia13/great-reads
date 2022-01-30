@@ -11,7 +11,7 @@ class BookSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class AuthorSerializer(serializers.HyperlinkedModelSerializer):
-    books = serializers.ReadOnlyField()
+    books = BookSerializer(many=True)
 
     class Meta:
         model = Author
