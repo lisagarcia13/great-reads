@@ -18,7 +18,11 @@ class AuthorSerializer(serializers.HyperlinkedModelSerializer):
         fields = ['id', 'name', 'books', 'image']
 
     def create(self, validated_data):
-        return Author.objects.create(**validated_data)
+        books_data = validated_data.pop('books')
+        author = Author.objects.create(**validated_data)
+        for book_data in books_data:
+            Book.objects.create(author=author, **book_data)
+        return author
 
     def update(self, instance, validated_data):
         instance.name = validated_data.get('name', instance.name)
