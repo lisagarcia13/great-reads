@@ -1,7 +1,5 @@
 .layout {
   background-color: #b2d6ff;
+  position: relative;
+  min-height: 100vh;
 }
-
-/* #e2cfea light pink */
-/* #caff8a neon green*/
-/* #c8e7ff light blue */

@@ -3,12 +3,15 @@
 .footer {
   background-color: #afb3f7;
   color: white;
-  min-height: 70px;
+  min-height: 60px;
   display: flex;
   flex-direction: column;
   font-family: "PT Sans";
   justify-content: center;
   align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .icons {
