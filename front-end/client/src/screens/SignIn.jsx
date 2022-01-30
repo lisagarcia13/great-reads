@@ -2,6 +2,7 @@ import { useState } from "react";
 import { signIn } from "../services/users";
 import { useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
+import "./SignIn.css";
 
 function SignIn(props) {
   const navigate = useNavigate();
@@ -68,7 +69,7 @@ function SignIn(props) {
         <form className="signin-form" onSubmit={onSignIn}>
           <div className="container">
             <label className="signin-label">Username: </label>
-            <div className="signin-usernmae">
+            <div className="signin-username">
               <input
                 required
                 className="signin-input"
