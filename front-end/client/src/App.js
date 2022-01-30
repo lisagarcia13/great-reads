@@ -51,7 +51,7 @@ function App() {
         <Route path={'/authors'} element={<Authors user={user} toggle={toggle} />} />
         <Route path={'/authors/:id'} element={<AuthorDetails user={user} setToggle={setToggle}/>} />
         <Route path={'/authors/:id/edit'} element={user ? <EditAuthors user={user} toggle={toggle} />: <Navigate to='/sign-up'/>} />
-        <Route path={'/add-author'} element={ user ? <AddAuthor user={user} setToggle={setToggle} /> : <Navigate to='/sign-up'/>} />
+        <Route path={'/add-author'} element={ <AddAuthor user={user} setToggle={setToggle} /> } />
         <Route path={'/sign-in'} element={<SignIn setUser={setUser}/>} />
         <Route path={'/sign-up'} element={<SignUp setUser={setUser}/>} />
         <Route path ={'/sign-out'} element={<SignOut setUser={setUser}/>} />

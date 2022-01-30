@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+
+.author-create {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: "PT Sans";
+}
+.author-sub-create {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+}
+.author-create-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+.author-create-form form {
+  display: flex;
+  max-width: 500px;
+  height: 300px;
+  width: 90%;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffe5d4;
+  box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.25);
+  padding: 20px 0;
+  margin-bottom: 30px;
+}

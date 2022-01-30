@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import { createAuthor } from "../services/authors";
+import "./AddAuthor.css";
 
 function AddAuthor(props) {
   let nav = useNavigate();
@@ -29,12 +30,12 @@ function AddAuthor(props) {
   return (
     <Layout user={props.user}>
       <div>
-        <div className="main-create">
-          <div className="sub-create">
-            <div className="create-form">
-              <h1>Add Author</h1>
+        <div className="author-create">
+          <div className="author-sub-create">
+            <div className="author-create-form">
+              <h1>Add Author Form</h1>
               <form onSubmit={handleSubmit}>
-                <label>Image URL:</label>
+                <label>Image URL: </label>
                 <input
                   placeholder="Image URL"
                   value={author.image}
@@ -42,7 +43,7 @@ function AddAuthor(props) {
                   required
                   onChange={handleChange}
                 />
-                <label>Author Name:</label>
+                <label>Author Name: </label>
                 <input
                   placeholder="Name"
                   value={author.name}

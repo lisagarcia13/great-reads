@@ -1,4 +1,5 @@
 import Footer from "./Footer";
+import "./Layout.css";
 
 const Layout = (props) => (
   <div className="layout">
