@@ -22,18 +22,20 @@ function AuthorCards(props) {
     <div className="all-authors">
       {authors.map((author) => (
         <div key={author.id} className="author-card-div">
-          <Link
-            className="link-author"
-            to={`/authors/${author.id}`}
-            style={{ textDecoration: "none" }}
-          >
-            <h2>{author.name}</h2>
-            <img
-              className="main-author-img"
-              src={author.image}
-              alt={author.title}
-            />
-          </Link>
+          <div className="test-author">
+            <Link
+              className="link-author"
+              to={`/authors/${author.id}`}
+              style={{ textDecoration: "none", color: "white" }}
+            >
+              <h2>{author.name}</h2>
+              <img
+                className="main-author-img"
+                src={author.image}
+                alt={author.title}
+              />
+            </Link>
+          </div>
         </div>
       ))}
     </div>
