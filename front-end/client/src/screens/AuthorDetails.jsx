@@ -32,27 +32,29 @@ function AuthorDetails(props) {
 
   return (
     <Layout user={props.user}>
-      <div>
-        <h2>{author.name}</h2>
-        <img
-          className="author-detail-img"
-          src={author.image}
-          alt={author.name}
-        />
-        <div className="button-container">
-          <Link to={`/authors/${author.id}/edit`}>Edit</Link>
-          <button className="delete-button" onClick={handleDelete}>
+      <div className="author-detail-container">
+        <div className="img-flex">
+          <img
+            className="author-detail-img"
+            src={author.image}
+            alt={author.name}
+          />
+        </div>
+
+        <div className="author-book-container">
+          <h2 className="author-detail-name">{author.name}</h2>
+          <h3 className="author-detail-header">Books:</h3>
+          <div>
+            <h3 className="book-list-detail">{author.books}</h3>
+          </div>
+        </div>
+        <div className="author-button-container">
+          <Link className="edit-author-link" to={`/authors/${author.id}/edit`}>
+            Edit
+          </Link>
+          <button className="author-delete-button" onClick={handleDelete}>
             Delete
           </button>
-          <div>
-            <h3>Books:</h3>
-            <div>
-              {/* <Link to = {`/books/${book.id}`} >
-             
-              </Link> */}
-              {author.books}
-            </div>
-          </div>
         </div>
       </div>
     </Layout>
