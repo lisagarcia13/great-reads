@@ -11,7 +11,6 @@ const api = axios.create({
         'https://greatreads1.herokuapp.com/'
 })
 
-// process.env.NODE_ENV === 'production'
 
 // const api = axios.create({
 //   baseURL:
