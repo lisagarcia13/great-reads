@@ -2,12 +2,6 @@
 
 .author-detail-container {
   display: grid;
-  grid-template-rows: 2fr, 1fr;
-  grid-template-columns: 1fr, 1fr, 2fr;
-  grid-template-areas:
-    "L R"
-    "L R"
-    "D D";
   color: white;
   font-family: "PT Sans";
   justify-content: space-evenly;
@@ -17,25 +11,21 @@
 
 .author-detail-img {
   height: 400px;
-  grid-area: "L";
   grid-column: 1/2;
   margin-bottom: 30px;
   margin-top: 50px;
 }
 
 .author-button-container {
-  grid-area: "D";
   grid-column: 2/1;
   padding: 10px;
   margin-bottom: 15px;
 }
 
 .author-book-container {
-  grid-area: "R";
   grid-column: 3/2;
 }
 .author-detail-name {
-  grid-area: "R";
   grid-column: 2/2;
   font-size: 32px;
 }
@@ -80,8 +70,4 @@
   text-decoration: none;
   font-size: 20px;
   font-family: "PT Sans";
-}
-
-.test {
-  display: flex;
 }
