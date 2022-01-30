@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import { createBook } from "../services/books";
+import "./AddBook.css";
 
 function AddBook(props) {
   let nav = useNavigate();
@@ -32,52 +33,59 @@ function AddBook(props) {
   return (
     <Layout user={props.user}>
       <div>
-        <div className="main-create">
-          <div className="sub-create">
-            <div className="create-form">
-              <h1>ADD BOOK</h1>
+        <div className="book-create">
+          <div className="book-sub-create">
+            <div className="book-create-form">
+              <h1>Add Book Form</h1>
               <form onSubmit={handleSubmit}>
-                <label>Image URL:</label>
+                <label className="book-label">Image URL:</label>
                 <input
+                  className="book-input"
                   placeholder="Image URL"
                   value={book.image}
                   name="image"
                   required
                   onChange={handleChange}
                 />
-                <label>Book Title:</label>
+                <label className="book-label">Book Title:</label>
                 <input
+                  className="book-input"
                   placeholder="Book Title"
                   value={book.title}
                   name="title"
                   required
                   onChange={handleChange}
                 />
-                <label>Release Date: </label>
+                <label className="book-label">Release Date: </label>
                 <input
+                  className="book-input"
                   placeholder="YYYY-MM-DD"
                   value={book.release}
                   name="date"
                   required
                   onChange={handleChange}
                 />
-                <label>Description:</label>
+                <label className="book-label">Description:</label>
                 <input
+                  className="book-input"
                   placeholder="Short Description"
                   value={book.description}
                   name="description"
                   required
                   onChange={handleChange}
                 />
-                <label>Author:</label>
+                <label className="book-label">Author:</label>
                 <input
+                  className="book-input"
                   placeholder="Author"
                   value={book.author}
                   name="author"
                   required
                   onChange={handleChange}
                 />
-                <button type="submit">Submit Book</button>
+                <button className="book-create-button" type="submit">
+                  Submit
+                </button>
               </form>
             </div>
           </div>

@@ -47,7 +47,7 @@ function App() {
         <Route path={'/books'} element={<Books user={user} toggle={toggle }/>} />
         <Route path={'/books/:id'} element={<BookDetails  user={user} setToggle={setToggle} /> } />
         <Route path={'/books/:id/edit'} element={ user ? <EditBooks user={user} setToggle={setToggle} /> : <Navigate to='/sign-up'/>} />
-        <Route path={'/add-book'} element={ user ?  <AddBook user={user} setToggle={setToggle}/> : <Navigate to='/sign-up'/>} />
+        <Route path={'/add-book'} element={ <AddBook user={user} setToggle={setToggle}/> } />
         <Route path={'/authors'} element={<Authors user={user} toggle={toggle} />} />
         <Route path={'/authors/:id'} element={<AuthorDetails user={user} setToggle={setToggle}/>} />
         <Route path={'/authors/:id/edit'} element={user ? <EditAuthors user={user} toggle={toggle} />: <Navigate to='/sign-up'/>} />
@@ -61,4 +61,3 @@ function App() {
 } 
 
 export default App;
-///user ? >: <Navigate to='/sign-up'/>
