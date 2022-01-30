@@ -14,10 +14,3 @@
   row-gap: 30px;
   column-gap: 30px;
 }
-
-.header-author {
-  font-family: "PT Sans";
-  color: white;
-  display: flex;
-  margin-bottom: 0px;
-}

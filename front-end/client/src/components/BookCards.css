@@ -6,15 +6,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 40px;
-  margin-bottom: 300px;
+  /* margin-bottom: 80px; */
+  padding: 30px;
   row-gap: 30px;
-  column-gap: 30px;
+  column-gap: 70px;
 }
-
-/* .header-book {
-  font-family: "PT Sans";
-  color: white;
-  display: flex;
-  margin-bottom: 0px;
-} */
