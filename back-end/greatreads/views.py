@@ -1,4 +1,4 @@
-from rest_framework import viewsets, permissions, generics
+from rest_framework import viewsets, permissions
 from greatreads.serializers import BookSerializer, AuthorSerializer
 from greatreads.models import Book, Author
 

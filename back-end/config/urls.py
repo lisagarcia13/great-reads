@@ -17,7 +17,6 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from greatreads import views
-from greatreads.views import CreateAuthor
 
 
 router = routers.DefaultRouter()
