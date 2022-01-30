@@ -13,7 +13,8 @@ import AddAuthor from './screens/AddAuthor'
 import EditBooks from './screens/EditBooks'
 import EditAuthors from './screens/EditAuthors'
 import BookDetails from './screens/BookDetails'
-import AuthorDetails from './screens/AuthorDetails';
+import AuthorDetails from './screens/AuthorDetails'
+import Nav from './components/Nav'
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
 
   return (
     <div className="App">
+      <Nav user={user} />
       <Routes>
         <Route path={'/'} element={<Home />} />
         <Route path={'/books'} element={<Books user={user} toggle={toggle }/>} />
