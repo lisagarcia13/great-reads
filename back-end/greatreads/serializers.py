@@ -16,3 +16,12 @@ class AuthorSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Author
         fields = ['id', 'name', 'books', 'image']
+
+    def create(self, validated_data):
+        return Author.objects.create(**validated_data)
+
+    def update(self, instance, validated_data):
+        instance.name = validated_data.get('name', instance.name)
+        instance.image = validated_data.get('image', instance.image)
+        instance.save()
+        return instance

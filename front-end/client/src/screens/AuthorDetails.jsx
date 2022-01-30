@@ -45,7 +45,11 @@ function AuthorDetails(props) {
           <h2 className="author-detail-name">{author.name}</h2>
           <h3 className="author-detail-header">Books:</h3>
           <div>
-            <h3 className="book-list-detail">{author.books}</h3>
+            {author.books.map((books) => (
+              <h3 key={books.id} className="book-list-detail">
+                {books.title}
+              </h3>
+            ))}
           </div>
         </div>
         <div className="author-button-container">
