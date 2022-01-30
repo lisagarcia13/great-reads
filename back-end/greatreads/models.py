@@ -15,7 +15,7 @@ class Book(models.Model):
     image = models.CharField(max_length=256, null=True)
     description = models.CharField(max_length=256)
     author = models.ForeignKey(
-        Author, on_delete=models.CASCADE, related_name='books')
+        Author, on_delete=models.CASCADE, related_name='books', blank=True, null=True)
 
     def __str__(self):
         return self.title
