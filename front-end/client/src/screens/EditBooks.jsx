@@ -70,7 +70,7 @@ function EditBooks(props) {
                 className="book-edit-input"
                 placeholder="YYYY-MM-DD"
                 value={book.release}
-                name="date"
+                name="release"
                 required
                 onChange={handleChange}
               />

@@ -3,7 +3,7 @@ from greatreads.models import Author, Book
 
 
 class BookSerializer(serializers.HyperlinkedModelSerializer):
-    author = serializers.StringRelatedField()
+    author = serializers.StringRelatedField(many=True)
 
     class Meta:
         model = Book

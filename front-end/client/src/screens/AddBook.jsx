@@ -8,9 +8,9 @@ function AddBook(props) {
   let nav = useNavigate();
 
   const [book, setBook] = useState({
+    image: "",
     title: "",
     release: "",
-    image: "",
     description: "",
     author: "",
   });
@@ -61,7 +61,7 @@ function AddBook(props) {
                   className="book-input"
                   placeholder="YYYY-MM-DD"
                   value={book.release}
-                  name="date"
+                  name="release"
                   required
                   onChange={handleChange}
                 />
@@ -77,6 +77,7 @@ function AddBook(props) {
                 <label className="book-label">Author:</label>
                 <input
                   className="book-input"
+                  rows={5}
                   placeholder="Author"
                   value={book.author}
                   name="author"

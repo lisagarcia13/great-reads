@@ -18,7 +18,7 @@ export const getBook = async id => {
   }
 }
 
-export const createBook = async book => {
+export const createBook = async (book) => {
   try {
       const response = await api.post('/books/', book)
       return response.data
