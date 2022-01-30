@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import { getAuthor, updateAuthor } from "../services/authors";
-import "./EditAuthor.css";
+import "./EditAuthors.css";
 
 function EditAuthors(props) {
   let nav = useNavigate();

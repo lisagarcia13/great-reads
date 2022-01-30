@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import { getBook, updateBook } from "../services/books";
+import "./EditBooks.css";
 
 function EditBooks(props) {
   let nav = useNavigate();
@@ -40,60 +41,63 @@ function EditBooks(props) {
   };
 
   return (
-    <div>
-      <Layout user={props.user}>
-        <div className="main-edit">
-          <div className="sub-edit">
-            <div className="edit-form">
-              <h1>EDIT PRODUCT</h1>
-              <form onSubmit={handleSubmit}>
-                <label>Image URL:</label>
-                <input
-                  placeholder="Image URL"
-                  value={book.image}
-                  name="image"
-                  required
-                  onChange={handleChange}
-                />
-                <label>Book Title:</label>
-                <input
-                  placeholder="Book Title"
-                  value={book.title}
-                  name="title"
-                  required
-                  onChange={handleChange}
-                />
-                <label>Release Date: </label>
-                <input
-                  placeholder="YYYY-MM-DD"
-                  value={book.release}
-                  name="date"
-                  required
-                  onChange={handleChange}
-                />
-                <label>Description:</label>
-                <input
-                  placeholder="Short Description"
-                  value={book.description}
-                  name="description"
-                  required
-                  onChange={handleChange}
-                />
-                <label>Author:</label>
-                <input
-                  placeholder="Author"
-                  value={book.author}
-                  name="author"
-                  required
-                  onChange={handleChange}
-                />
-                <button>Submit Edit</button>
-              </form>
-            </div>
+    <Layout user={props.user}>
+      <div className="book-edit">
+        <div className="book-sub-edit">
+          <div className="book-edit-form">
+            <h1>Edit Book</h1>
+            <form onSubmit={handleSubmit}>
+              <label className="book-edit-label">Image URL:</label>
+              <input
+                className="book-edit-input"
+                placeholder="Image URL"
+                value={book.image}
+                name="image"
+                required
+                onChange={handleChange}
+              />
+              <label className="book-edit-label">Book Title:</label>
+              <input
+                className="book-edit-input"
+                placeholder="Book Title"
+                value={book.title}
+                name="title"
+                required
+                onChange={handleChange}
+              />
+              <label className="book-edit-label">Release Date: </label>
+              <input
+                className="book-edit-input"
+                placeholder="YYYY-MM-DD"
+                value={book.release}
+                name="date"
+                required
+                onChange={handleChange}
+              />
+              <label className="book-edit-label">Description:</label>
+              <input
+                className="book-edit-input"
+                placeholder="Short Description"
+                value={book.description}
+                name="description"
+                required
+                onChange={handleChange}
+              />
+              <label className="book-edit-label">Author:</label>
+              <input
+                className="book-edit-input"
+                placeholder="Author"
+                value={book.author}
+                name="author"
+                required
+                onChange={handleChange}
+              />
+              <button className="book-edit-button">Submit </button>
+            </form>
           </div>
         </div>
-      </Layout>
-    </div>
+      </div>
+    </Layout>
   );
 }
 

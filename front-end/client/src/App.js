@@ -1,5 +1,5 @@
 import './App.css';
-import { Routes, Route, Navigate} from 'react-router-dom'
+import { Routes, Route} from 'react-router-dom'
 import {useEffect, useState} from 'react'
 import { verifyUser } from './services/users'
 import Authors from './screens/Authors'
