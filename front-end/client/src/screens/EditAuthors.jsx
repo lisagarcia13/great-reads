@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import { getAuthor, updateAuthor } from "../services/authors";
+import "./EditAuthor.css";
 
 function EditAuthors(props) {
   let nav = useNavigate();
@@ -37,36 +38,36 @@ function EditAuthors(props) {
   };
 
   return (
-    <div>
-      <Layout user={props.user}>
-        <div className="main-edit">
-          <div className="sub-edit">
-            <div className="edit-form">
-              <h1>EDIT Author</h1>
-              <form onSubmit={handleSubmit}>
-                <label>Author Name:</label>
-                <input
-                  placeholder="Name"
-                  value={author.name}
-                  name="name"
-                  required
-                  onChange={handleChange}
-                />
-                <label>Image URL:</label>
-                <input
-                  placeholder="Image URL"
-                  value={author.image}
-                  name="image"
-                  required
-                  onChange={handleChange}
-                />
-                <button>Submit Edit</button>
-              </form>
-            </div>
+    <Layout user={props.user}>
+      <div className="author-main-edit">
+        <div className="author-sub-edit">
+          <div className="author-edit-form">
+            <h1>Edit Author</h1>
+            <form onSubmit={handleSubmit}>
+              <label className="edit-author-label">Author Name:</label>
+              <input
+                className="edit-author-input"
+                placeholder="Name"
+                value={author.name}
+                name="name"
+                required
+                onChange={handleChange}
+              />
+              <label className="edit-author-label">Image URL:</label>
+              <input
+                className="edit-author-input"
+                placeholder="Image URL"
+                value={author.image}
+                name="image"
+                required
+                onChange={handleChange}
+              />
+              <button className="author-update-button">Submit Edit</button>
+            </form>
           </div>
         </div>
-      </Layout>
-    </div>
+      </div>
+    </Layout>
   );
 }
 
