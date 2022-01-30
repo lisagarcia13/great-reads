@@ -24,7 +24,7 @@ function BookCards(props) {
         <div key={book.id} className="book-card-div">
           <Link
             className="link-book"
-            style={{ textDecoration: "none" }}
+            style={{ textDecoration: "none", color: "white" }}
             to={`/books/${book.id}`}
           >
             <h2>{book.title}</h2>
