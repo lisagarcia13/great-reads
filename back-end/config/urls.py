@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
 from greatreads import views
+from greatreads.views import CreateAuthor
 
 
 router = routers.DefaultRouter()
@@ -28,4 +29,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
     path('', include('accounts.urls')),
+    path('author/create', CreateAuthor.as_view(), name='create-author')
 ]
