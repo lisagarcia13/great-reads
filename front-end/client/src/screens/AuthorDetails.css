@@ -71,3 +71,24 @@
   font-size: 20px;
   font-family: "PT Sans";
 }
+
+@media (max-width: 480px) {
+  .author-detail-img {
+    height: 300px;
+  }
+  .author-detail-name {
+    font-size: 28px;
+  }
+  .author-detail-header {
+    font-size: 20px;
+  }
+  .book-list-detail {
+    font-size: 18px;
+  }
+  .edit-author-link {
+    font-size: 18px;
+  }
+  .author-delete-button {
+    padding: 8px;
+  }
+}
