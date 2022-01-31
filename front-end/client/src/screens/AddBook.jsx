@@ -96,18 +96,22 @@ function AddBook(props) {
                 /> */}
                 <select
                   name="author"
+                  value={authors.id}
                   className="book-input"
                   onChange={handleChange}
                 >
                   <option>Author Name</option>
-                  {authors &&
-                    authors.map((author) => {
-                      return (
-                        <option value={author.id} key={author.id}>
-                          {author.name}
-                        </option>
-                      );
-                    })}
+                  {authors.map((author) => {
+                    return (
+                      <option
+                        value={author.id}
+                        key={author.id}
+                        onChange={handleChange}
+                      >
+                        {author.name}
+                      </option>
+                    );
+                  })}
                 </select>
                 <button className="book-create-button" type="submit">
                   Submit

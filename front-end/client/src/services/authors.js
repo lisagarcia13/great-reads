@@ -1,5 +1,13 @@
 import api from './apiConfig'
 
+
+const getToken = () => {
+  return new Promise(resolve => {
+      resolve(`Bearer ${localStorage.getItem('token') || null}`)
+  })
+}
+
+
 export const getAuthors = async () => {
   try {
       const response = await api.get('/authors/')
@@ -20,16 +28,28 @@ export const getAuthor = async id => {
 
 export const createAuthor = async (author) => {
   try {
-      const response = await api.post('/authors/', author)
-      return response.data
-  } catch (error) {
+    const token = await getToken();
+    const headers = {
+      headers: {
+        Authorization: token,
+      },
+    };
+    const response = await api.post('/authors/', author, headers)
+    return response.data
+  }catch (error) {
       throw error
   }
 }
 
 export const updateAuthor = async (id, author) => {
   try {
-      const response = await api.put(`/authors/${id}/`, author)
+    const token = await getToken();
+    const headers = {
+      headers: {
+        Authorization: token,
+      },
+    };
+      const response = await api.put(`/authors/${id}/`, author, headers)
       return response.data
   } catch (error) {
       throw error
@@ -38,7 +58,13 @@ export const updateAuthor = async (id, author) => {
 
 export const deleteAuthor = async (id) => {
   try {
-      const response = await api.delete(`/authors/${id}`)
+    const token = await getToken();
+    const headers = {
+      headers: {
+        Authorization: token,
+      },
+    };
+      const response = await api.delete(`/authors/${id}`, headers)
       return response.data
   } catch (error) {
       throw error
