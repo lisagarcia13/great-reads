@@ -30,7 +30,8 @@ function BookDetails(props) {
         </div>
         <div className="book-author">
           <h2 className="book-title-detail">{book.title}</h2>
-          <h3> Written by: {book.author}</h3>
+
+          <h3> {book.author}</h3>
           <div className="book-details">
             <h4> Release Date: {book.release}</h4>
             <h3>Description: </h3>

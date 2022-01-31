@@ -20,7 +20,7 @@
 .book-detail-button-container {
   grid-column: 2/1;
   padding: 10px;
-  margin-bottom: 180px;
+  margin-bottom: 120px;
   grid-row: 2/2;
   margin-top: -100px;
 }

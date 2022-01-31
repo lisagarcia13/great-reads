@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
+// import { getAuthors } from "../services/authors";
 import { createBook } from "../services/books";
 import "./AddBook.css";
 
 function AddBook(props) {
   let nav = useNavigate();
+  // const params = useParams();
+  // const [authors, setAuthors] = useState([]);
 
   const [book, setBook] = useState({
     image: "",
@@ -29,6 +32,14 @@ function AddBook(props) {
     nav("/books");
     props.setToggle((prevToggle) => !prevToggle);
   };
+
+  // useEffect(() => {
+  //   const grabAuthors = async () => {
+  //     const authorsList = await getAuthors();
+  //     setAuthors(authorsList);
+  //   };
+  //   grabAuthors();
+  // }, [params.id]);
 
   return (
     <Layout user={props.user}>
@@ -83,6 +94,17 @@ function AddBook(props) {
                   // required
                   onChange={handleChange}
                 />
+                {/* <select name="author" onChange={handleChange}>
+                  <option>Author Name</option>
+                  {authors &&
+                    authors.map((author) => {
+                      return (
+                        <option value={author.id} key={author.id}>
+                          {author.name}
+                        </option>
+                      );
+                    })} */}
+                {/* </select> */}
                 <button className="book-create-button" type="submit">
                   Submit
                 </button>
