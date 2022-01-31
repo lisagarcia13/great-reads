@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import { getBook, deleteBook } from "../services/books";
 import "./BookDetails.css";
 
 function BookDetails(props) {
-  const navigate = useNavigate();
-
   const [book, setBook] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const { id } = useParams();
@@ -23,12 +21,6 @@ function BookDetails(props) {
   if (!isLoaded) {
     return <h1>Loading...</h1>;
   }
-
-  const handleDelete = () => {
-    deleteBook(book.id);
-    navigate("/books");
-    props.setToggle((prevToggle) => !prevToggle);
-  };
 
   return (
     <Layout user={props.user}>
@@ -52,7 +44,10 @@ function BookDetails(props) {
           <Link className="edit-book-link" to={`/books/${book.id}/edit`}>
             Edit
           </Link>
-          <button className="book-delete-button" onClick={handleDelete}>
+          <button
+            className="book-delete-button"
+            onClick={() => deleteBook(book.id)}
+          >
             Delete
           </button>
         </div>

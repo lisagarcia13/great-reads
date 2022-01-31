@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import Layout from "../components/Layout";
 import { getAuthor, deleteAuthor } from "../services/authors";
 import "./AuthorDetails.css";
 
 function AuthorDetails(props) {
-  const navigate = useNavigate();
-
   const [author, setAuthor] = useState(null);
   const [isLoaded, setLoaded] = useState(false);
   const { id } = useParams();
@@ -23,12 +21,6 @@ function AuthorDetails(props) {
   if (!isLoaded) {
     return <h1>Loading...</h1>;
   }
-
-  const handleDelete = () => {
-    deleteAuthor(author.id);
-    navigate("/authors");
-    props.setToggle((prevToggle) => !prevToggle);
-  };
 
   return (
     <Layout user={props.user}>
@@ -56,7 +48,10 @@ function AuthorDetails(props) {
           <Link className="edit-author-link" to={`/authors/${author.id}/edit`}>
             Edit
           </Link>
-          <button className="author-delete-button" onClick={handleDelete}>
+          <button
+            className="author-delete-button"
+            onClick={() => deleteAuthor(author.id)}
+          >
             Delete
           </button>
         </div>

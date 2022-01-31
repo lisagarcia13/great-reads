@@ -45,11 +45,11 @@ function App() {
       <Routes>
         <Route path={'/'} element={<Home />} />
         <Route path={'/books'} element={<Books user={user} toggle={toggle }/>} />
-        <Route path={'/books/:id'} element={<BookDetails  user={user} setToggle={setToggle} /> } />
+        <Route path={'/books/:id'} element={<BookDetails  user={user}  /> } />
         <Route path={'/books/:id/edit'} element={<EditBooks user={user} setToggle={setToggle} />} />
         <Route path={'/add-book'} element={ <AddBook user={user} setToggle={setToggle}/> } />
         <Route path={'/authors'} element={<Authors user={user} toggle={toggle} />} />
-        <Route path={'/authors/:id'} element={<AuthorDetails user={user} setToggle={setToggle}/>} />
+        <Route path={'/authors/:id'} element={<AuthorDetails user={user} />} />
         <Route path={'/authors/:id/edit'} element={<EditAuthors user={user} setToggle={toggle} />} />
         <Route path={'/add-author'} element={ <AddAuthor user={user} setToggle={setToggle} /> } />
         <Route path={'/sign-in'} element={<SignIn setUser={setUser}/>} />
