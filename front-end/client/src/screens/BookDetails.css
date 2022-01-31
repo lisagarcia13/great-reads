@@ -81,3 +81,26 @@
 .book-title-detail {
   font-size: 32px;
 }
+
+@media (max-width: 480px) {
+  .book-detail-img {
+    height: 300px;
+    margin-left: 0px;
+    margin-top: 10px;
+  }
+  .book-detail-container {
+    display: inline-block;
+  }
+  .book-detail-button-container {
+    margin-top: -180px;
+    padding: 5px;
+    margin-left: -90px;
+  }
+  .book-p {
+    display: inline-block;
+    line-height: 1.5;
+    width: 90%;
+    height: 25%;
+    margin: 1%;
+  }
+}
