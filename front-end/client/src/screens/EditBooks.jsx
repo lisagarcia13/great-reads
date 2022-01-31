@@ -45,7 +45,7 @@ function EditBooks(props) {
       <div className="book-edit">
         <div className="book-sub-edit">
           <div className="book-edit-form">
-            <h1>Edit Book</h1>
+            <h2 className="edit-book-main">Edit Book</h2>
             <form onSubmit={handleSubmit}>
               <label className="book-edit-label">Image URL:</label>
               <input
