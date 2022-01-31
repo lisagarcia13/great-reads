@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap");
+
+.home {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 20px;
+}
+.home-img {
+  width: 600px;
+  grid-column: 1/2;
+  padding: 20px;
+  margin-left: 20px;
+}
+
+.home-text {
+  grid-column: 2/2;
+  display: inline-block;
+  line-height: 1.5;
+  width: 50%;
+  height: 25%;
+  margin: 1%;
+  color: #3a0ca3;
+  font-family: "PT Sans";
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.about {
+  color: white;
+  font-size: 32px;
+}
