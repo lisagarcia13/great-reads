@@ -30,3 +30,16 @@
   color: white;
   font-size: 32px;
 }
+
+@media (max-width: 480px) {
+  .home-img {
+    width: 350px;
+  }
+  .home-text {
+    font-size: 18px;
+    width: 80%;
+  }
+  .about {
+    font-size: 22px;
+  }
+}
