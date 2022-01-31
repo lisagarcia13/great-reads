@@ -3,10 +3,12 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import { getBook, updateBook } from "../services/books";
+import { getAuthors } from "../services/authors";
 import "./EditBooks.css";
 
 function EditBooks(props) {
   let nav = useNavigate();
+  const [authors, setAuthors] = useState([]);
 
   const [book, setBook] = useState({
     title: "",
@@ -39,6 +41,13 @@ function EditBooks(props) {
     nav(`/books/${id}`);
     props.setToggle((prevToggle) => !prevToggle);
   };
+  useEffect(() => {
+    const grabAuthors = async () => {
+      const authorsList = await getAuthors();
+      setAuthors(authorsList);
+    };
+    grabAuthors();
+  }, [id]);
 
   return (
     <Layout user={props.user}>
@@ -84,14 +93,29 @@ function EditBooks(props) {
                 onChange={handleChange}
               />
               <label className="book-edit-label">Author:</label>
-              <input
+              {/* <input
                 className="book-edit-input"
                 placeholder="Author"
                 value={book.author}
                 name="author"
-                required
+                // required
                 onChange={handleChange}
-              />
+              /> */}
+              <select
+                className="book-input"
+                name="author"
+                onChange={handleChange}
+              >
+                <option>Author Name</option>
+                {authors &&
+                  authors.map((author) => {
+                    return (
+                      <option value={author.id} key={author.id}>
+                        {author.name}
+                      </option>
+                    );
+                  })}
+              </select>
               <button className="book-edit-button">Submit </button>
             </form>
           </div>

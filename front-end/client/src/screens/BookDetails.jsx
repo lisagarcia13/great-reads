@@ -5,7 +5,7 @@ import { getBook, deleteBook } from "../services/books";
 import "./BookDetails.css";
 
 function BookDetails(props) {
-  const [book, setBook] = useState([]);
+  const [book, setBook] = useState([null]);
   const [isLoaded, setLoaded] = useState(false);
   const { id } = useParams();
 
