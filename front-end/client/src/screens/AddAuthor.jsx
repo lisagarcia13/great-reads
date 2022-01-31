@@ -34,7 +34,7 @@ function AddAuthor(props) {
         <div className="author-create">
           <div className="author-sub-create">
             <div className="author-create-form">
-              <h1>Add Author Form</h1>
+              <h2 className="author-add-label">Add Author Form</h2>
               <form onSubmit={handleSubmit}>
                 <label className="add-label">Image URL: </label>
                 <input
