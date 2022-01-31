@@ -3,7 +3,7 @@
 .footer {
   background-color: #afb3f7;
   color: white;
-  min-height: 60px;
+  min-height: 70px;
   display: flex;
   flex-direction: column;
   font-family: "PT Sans";
