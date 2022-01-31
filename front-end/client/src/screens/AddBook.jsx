@@ -2,12 +2,10 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Layout from "../components/Layout";
 import { createBook } from "../services/books";
-// import { getAuthor } from "../services/authors";
 import "./AddBook.css";
 
 function AddBook(props) {
   let nav = useNavigate();
-  // const [authorList, setAuthorList] = useState([]);
 
   const [book, setBook] = useState({
     image: "",
@@ -32,21 +30,13 @@ function AddBook(props) {
     props.setToggle((prevToggle) => !prevToggle);
   };
 
-  // useEffect(() => {
-  //   const grabAuthors = async () => {
-  //     const allAuthors = await getAuthor();
-  //     setAuthorList(allAuthors);
-  //   };
-  //   grabAuthors();
-  // }, []);
-
   return (
     <Layout user={props.user}>
       <div>
         <div className="book-create">
           <div className="book-sub-create">
             <div className="book-create-form">
-              <h1>Add Book Form</h1>
+              <h2 className="book-main-header">Add Book Form</h2>
               <form onSubmit={handleSubmit}>
                 <label className="book-label">Image URL:</label>
                 <input

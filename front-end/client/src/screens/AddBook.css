@@ -48,6 +48,9 @@
   background-color: #edf6f9;
   border: none;
 }
+.book-main-header {
+  font-size: 30px;
+}
 
 .book-create-button {
   margin-top: 10px;
@@ -66,4 +69,16 @@
 .book-create-button:hover {
   box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 480px) {
+  .book-label {
+    font-size: 18px;
+  }
+  .book-main-header {
+    font-size: 22px;
+  }
+  .book-create-form {
+    margin-top: 20px;
+  }
 }
