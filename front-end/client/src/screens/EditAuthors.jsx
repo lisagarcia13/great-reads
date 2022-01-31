@@ -42,7 +42,7 @@ function EditAuthors(props) {
       <div className="author-main-edit">
         <div className="author-sub-edit">
           <div className="author-edit-form">
-            <h1>Edit Author</h1>
+            <h2 className="edit-label">Edit Author</h2>
             <form onSubmit={handleSubmit}>
               <label className="edit-author-label">Author Name:</label>
               <input
